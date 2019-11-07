@@ -1,14 +1,19 @@
 # requirejs-monaco-ember-polyfill
 
-This polyfill was created for Ember apps that use the ESM/Webpack configuration of [monaco-editor](https://github.com/Microsoft/monaco-editor-samples).
+This polyfill was created for Ember apps that use the ESM/Webpack configuration of [monaco-editor](https://github.com/Microsoft/monaco-editor-samples) via Embroider. It is _not_ needed when using [ember-monaco](https://github.com/mike-north/ember-monaco).
 
-It attaches a fake `.s.contexts._config` with a value of `''` to `window.requirejs`.
+The polyfill attaches a fake `.s.contexts._config` with a value of `''` to `window.requirejs` that runs as soon as the package is imported.
 
 ## Usage
+
+```sh
+yarn add @cardstack/requirejs-monaco-ember-polyfill
+```
 
 ```js
 import requirejsContext from 'requirejs-monaco-ember-polyfill';
 import * as monaco from 'monaco-editor';
+// the order of imports matters!
 
 requirejsContext()
 ```

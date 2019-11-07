@@ -1,8 +1,12 @@
 {
-  "name": "requirejs-monaco-ember-polyfill",
+  "name": "@cardstack/requirejs-monaco-ember-polyfill",
   "version": "0.0.1",
   "description": "Prevent requirejs type errors when using monaco-editor in an Ember app",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cardstack/requirejs-monaco-ember-polyfill.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
